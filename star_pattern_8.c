@@ -1,23 +1,22 @@
 #include <stdio.h>  
-int main(void) {  
-  int n,m;  
-  printf("Enter the number");  
-  scanf("%d",&n);  
-  m=2*n-1;  
-  for(int i=1;i<=m;i++)  
-  {  
-    for(int j=1;j<=m;j++)  
+  
+int main()  
+{  
+    int n;  
+    printf("Enter the number of rows");  
+    scanf("%d",&n);  
+    for(int i=1;i<=n;i++)  
     {  
-       if(i==j || j==(m-i+1))  
-       {  
-         printf("*");  
-       }  
-       else  
-       {  
-         printf(" ");  
-       }  
+        for(int j=1;j<=i;j++)  
+        {  
+        if(j==1|| i==j || i==n )  
+        {  
+            printf("*");  
+        }  
+        else  
+        printf(" ");  
+        }  
+        printf("\n");  
     }  
-    printf("\n");  
-  }  
-  return 0;  
+    return 0;  
 }  
